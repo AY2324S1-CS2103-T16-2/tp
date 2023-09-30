@@ -9,7 +9,7 @@
         "project-team": "Project team",
         "zhan-peng": "Zhan Peng",
         "jane-doe": "Jane Doe",
-        "johnny-doe": "Johnny Doe",
+        "ng-shuen-jin": "Ng Shuen Jin",
         "jean-doe": "Jean Doe",
         "james-doe": "James Doe"
       },
@@ -146,6 +146,14 @@
     {
       "src": "team/leezhanpeng.md",
       "title": "Zhan Peng's Project Portfolio Page",
+      "headings": {
+        "project-medisync": "Project: MediSync"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/shuenj.md",
+      "title": "Ng Shuen Jin's Project Portfolio Page",
       "headings": {
         "project-medisync": "Project: MediSync"
       },
