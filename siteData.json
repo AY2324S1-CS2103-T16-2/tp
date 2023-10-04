@@ -8,7 +8,7 @@
         "about-us": "About Us",
         "project-team": "Project team",
         "zhan-peng": "Zhan Peng",
-        "jane-doe": "Jane Doe",
+        "eric-xiong": "Eric Xiong",
         "ng-shuen-jin": "Ng Shuen Jin",
         "zheng-chenglong": "Zheng Chenglong",
         "james-doe": "James Doe"
@@ -115,6 +115,7 @@
         "listing-all-persons-list": "Listing all persons : list",
         "editing-a-person-edit": "Editing a person : edit",
         "locating-persons-by-name-find": "Locating persons by name: find",
+        "returning-affiliations-of-a-doctor-patient-affn": "Returning affiliations of a doctor/patient: affn",
         "deleting-a-person-delete": "Deleting a person : delete",
         "clearing-all-entries-clear": "Clearing all entries : clear",
         "exiting-the-program-exit": "Exiting the program : exit",
@@ -132,6 +133,14 @@
       "title": "",
       "headings": {
         "addressbook-level-3": "AddressBook Level-3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/ericxiong420.md",
+      "title": "Eric Xiong's Project Portfolio Page",
+      "headings": {
+        "project-addressbook-level-3": "Project: AddressBook Level 3"
       },
       "headingKeywords": {}
     },
