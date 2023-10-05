@@ -269,13 +269,16 @@ _{Explain here how the data archiving feature will be implemented}_
 
 **Target user profile**:
 
-* A head nurse of a hospital
-* prefer desktop apps over other types
-* can type fast
+* a head nurse of a hospital
+* has a need to track significant number of contacts 
+* has a need to quickly identify relevant individuals from the vast pool of contacts
 * prefers typing to mouse interactions
 * is reasonably comfortable using CLI apps
+* can type fast
 
-**Value proposition**: Provide categories for different healthcare roles, healthcare-specific information within each contact, capacity to track duty days and shifts for staff members, an emergency contacts section that updates based on who is on duty, robust search and filter capabilities to quickly find staff members based on criteria such as department, specialisation
+**Value proposition**: 
+
+Provide categories for different healthcare roles, healthcare-specific information within each contact, capacity to track duty days and shifts for staff members, an emergency contacts section that updates based on who is on duty, robust search and filter capabilities to quickly find staff members based on criteria such as department, specialisation
 
 
 ### User stories
@@ -332,30 +335,135 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 ### Use cases
 
-(For all use cases below, the **System** is the `AddressBook` and the **Actor** is the `user`, unless specified otherwise)
+(For all use cases below, the **System** is the `ContactList` and the **Actor** is the `user`, unless specified otherwise)
 
-**Use case: Delete a person**
+**Use case: UC1 Add a person to the contacts**
 
 **MSS**
 
-1.  User requests to list persons
-2.  AddressBook shows a list of persons
-3.  User requests to delete a specific person in the list
-4.  AddressBook deletes the person
+1.  User requests to add a new person to the contacts.
+2.  ContactList adds the new person to the contacts with the provided details.
+    Use case ends.
 
+**Extensions**
+
+* 1a. User provides incomplete or invalid data.
+
+    * 1a1. ContactList shows an error message indicating the specific validation issue.
+    * 1a2. User corrects the data and makes a new request.
+    * Steps 1a1-1a2 are repeated until the data entered are valid.
+      Use case resumes from step 3.
+
+**Use case: UC2 List all persons in the contacts**
+
+**MSS**
+
+1.  User requests to list all persons in the contacts.
+2.  ContactList displays a list of all persons in the contacts.
     Use case ends.
 
 **Extensions**
 
 * 2a. The list is empty.
-
   Use case ends.
 
-* 3a. The given index is invalid.
+**Use case: UC3 Edit a person's information**
 
-    * 3a1. AddressBook shows an error message.
+**MSS**
 
-      Use case resumes at step 2.
+1.  User requests to _list all persons in the contacts (UC2)_.
+2.  User requests to edit a specific person's information in the list.
+3.  ContactList updates the person's information with the changes provided by the user.
+    Use case ends.
+
+**Extensions**
+
+* 1a. The list is empty.
+  Use case ends.
+
+* 2a. The given index is invalid.
+
+    * 2a1. ContactList shows an error message. 
+      Use case ends.
+
+* 2b. User provides invalid data.
+
+    * 2b1. ContactList shows an error message indicating the specific validation issue.
+    * 2b2. User corrects the data and resubmits.
+    * Steps 2b1-2b2 are repeated until the data entered are valid. 
+      Use case resumes from step 3.
+
+**Use case: UC4 Delete a person**
+
+**MSS**
+
+1.  User requests to _list all persons in the contacts (UC2)_.
+2.  User requests to delete a specific person in the list.
+3.  ContactList deletes the person.
+    Use case ends.
+
+**Extensions**
+
+* 1a. The list is empty.
+  Use case ends.
+
+* 2a. The given index is invalid.
+
+    * 2a1. ContactList shows an error message.
+      Use case ends.
+
+**Use case: UC5 Find a person by name**
+
+**MSS**
+
+1.  User requests to find a specific person by name in the contacts.
+2.  ContactList displays a list of persons matching the search criteria.
+    Use case ends.
+
+**Extensions**
+
+* 2a. No persons matching the search criteria are found.
+
+    * 2a1. The list is empty.
+      Use case ends.
+
+**Use case: UC6 List affiliations of a person**
+
+**MSS**
+
+1.  User requests to _find a person by name(UC4)_.
+2.  User requests to list the affiliations of a specific person in the list.
+3.  ContactList shows a list of affiliations of the specific person.
+    Use case ends.
+
+**Extensions**
+
+* 1a. The list is empty.
+  Use case ends.
+
+* 2a. The given index is invalid.
+
+    * 2a1. ContactList shows an error message.
+      Use case ends.
+
+* 3a. The list is empty.
+  Use case ends.
+
+**Use case: UC7 Get Help**
+
+**MSS**
+
+1.  User requests to get help.
+2.  ContactList provides a message explaining how to access the help page.
+    Use case ends.
+
+**Use case: UC8 Exit MediSync**
+
+**MSS**
+
+1.  User requests to exit.
+2.  ContactList closes itself.
+    Use case ends.
 
 *{More to be added}*
 
