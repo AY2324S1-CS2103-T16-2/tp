@@ -125,10 +125,10 @@ with(this){return _c('ul',[_c('li',[_v("stores the address book data i.e., all "
 with(this){return _c('h3',{attrs:{"id":"storage-component"}},[_v("Storage component"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#storage-component","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('p',[_c('strong',[_v("API")]),_v(" : "),_c('a',{attrs:{"href":"https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/seedu/address/storage/Storage.java"}},[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Storage.java")])])])}
+with(this){return _c('p',[_c('strong',[_v("API")]),_v(" : "),_c('a',{attrs:{"href":"https://github.com/AY2324S1-CS2103-T16-2/tp/blob/master/src/main/java/seedu/address/storage/Storage.java"}},[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Storage.java")])])])}
 },function anonymous(
 ) {
-with(this){return _c('p',[_c('a',{attrs:{"href":"/tp/diagrams/StorageClassDiagram.png","target":"_self"}},[_c('img',{staticClass:"img-fluid",attrs:{"src":"/tp/diagrams/StorageClassDiagram.png","alt":"Storage Class Diagram"}})])])}
+with(this){return _c('p',[_c('a',{attrs:{"href":"/tp/diagrams/storageClassDiagram.png","target":"_self"}},[_c('img',{staticClass:"img-fluid",attrs:{"src":"/tp/diagrams/storageClassDiagram.png","alt":"Storage Class Diagram"}})])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("The "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Storage")]),_v(" component,")])}
@@ -143,7 +143,7 @@ with(this){return _c('p',[_v("Specifically, the "),_c('code',{pre:true,attrs:{"c
 with(this){return _c('p',[_v("The following activity diagram summarizes the jsonification process of the AddressBook when a user executes the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("exit")]),_v(" command or closes MediSync:")])}
 },function anonymous(
 ) {
-with(this){return _c('p',[_c('a',{attrs:{"href":"/tp/diagrams/StorageActivityDiagram.png","target":"_self"}},[_c('img',{staticClass:"img-fluid",attrs:{"src":"/tp/diagrams/StorageActivityDiagram.png","alt":"StorageActivityDiagram"}})])])}
+with(this){return _c('p',[_c('a',{attrs:{"href":"/tp/diagrams/storageActivityDiagram.png","target":"_self"}},[_c('img',{staticClass:"img-fluid",attrs:{"src":"/tp/diagrams/storageActivityDiagram.png","alt":"StorageActivityDiagram"}})])])}
 },function anonymous(
 ) {
 with(this){return _c('h3',{attrs:{"id":"common-classes"}},[_v("Common classes"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#common-classes","onclick":"event.stopPropagation()"}})])}
@@ -359,6 +359,6 @@ with(this){return _c('h3',{attrs:{"id":"saving-data"}},[_v("Saving data"),_c('a'
 with(this){return _c('ol',[_c('li',[_c('p',[_v("Dealing with missing/corrupted data files")]),_v(" "),_c('ol',[_c('li',[_c('em',[_v("{explain how to simulate a missing/corrupted file, and the expected behavior}")])])])]),_v(" "),_c('li',[_c('p',[_c('em',[_v("{ more test cases …​ }")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.1.0")]),_v(", generated on Wed, 25 Oct 2023, 14:05:14 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.1.0")]),_v(", generated on Wed, 25 Oct 2023, 14:10:17 GMT+8]")])])])}
 }];
   
