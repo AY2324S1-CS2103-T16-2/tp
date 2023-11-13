@@ -131,13 +131,14 @@ Format: `edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/AFFN_NAME]…​`
 * Edits the person at the specified `INDEX`. The index refers to the index number shown in the displayed person list. The index **must be a positive integer** 1, 2, 3, …​
 * At least one of the optional fields must be provided.
 * Existing values will be updated to the input values.
+* Fields that are not specified will not have their values updated (i.e. will remain the same).
 * When editing affiliations, the existing affiliations of the person will be removed i.e. adding of affiliations is not cumulative.
 * You can remove all the person’s affiliations by typing `a/` without
     specifying any affiliations after it.
-* Removing all affiliation automatically deletes the person from others' affiliation.
+* Removing all affiliations automatically deletes the person from others' affiliation.
 
 Examples:
-*  `edit 3 p/81234567 a/` edits the phone number of the 3rd person to `81234567` and removes the person’s affiliation
+*  `edit 3 p/81234567 a/` edits the phone number of the 3rd person to `81234567` and removes the person’s affiliation.
 *  `edit 1 n/Sally Wing e/sallyw@kmail.com` edits the name and the email of the 1st person to `Sally Wing` and `sallyw@kmail.com` respectively.
 
 
@@ -148,18 +149,19 @@ to search for.
 
 Format: `find (n|p|e|r|a)/[KEYWORD] [MORE_KEYWORDS]...`
 
-* Supports prefixes `n/` for `NAME`, `p/` for `PHONE`, `e/` for `EMAIL`, `r/` for `ROLE`, and `a/` for `AFFILIATION`
+* Supports prefixes `n/` for `NAME`, `p/` for `PHONE`, `e/` for `EMAIL`, `r/` for `ROLE`, and `a/` for `AFFILIATION`.
 * Exactly 1 prefix is supported, indicated by the `|` (OR) indicator in the format. Using two or more prefixes in one search will lead to an invalid command.
-* The search is case-insensitive. e.g `hans` will match `Hans`
-* The order of the keywords does not matter. e.g. `Hans Bo` will match `Bo Hans`
-* Keywords only require a partial match, e.g. `find n/chard` will return `Richard Gramson`, or `find e/max` will return persons with email such as `himax@test.com`
-* Persons matching at least one keyword will be returned (i.e. `OR` search).
+* Each `KEYWORD` is separated from the next by a space, thus `KEYWORD`s themselves cannot contain spaces.
+* The search is case-insensitive. e.g `hans` will match `Hans`.
+* The order of the keywords does not matter. e.g. `Hans Bo` will match `Bo Hans`.
+* Keywords only require a partial match, e.g. `find n/chard` will return `Richard Gramson`, or `find e/max` will return persons with email such as `himax@test.com`.
+* Persons matching at least one keyword will be returned (i.e. OR search).
   e.g. `Hans Bo` will return `Hans Gruber`, `Bo Yang`
 
 Examples:
 * `find p/976` returns any person in the contact list that has `976` in its phone number.
-* `find n/eve irfan` returns `Irfan Ibrahim`, `Evelyn Ng`<br>
-  ![result for 'find alex david'](images/findEveIrfanResult.png)
+* `find n/eve irfan` returns `Irfan Ibrahim`, `Evelyn Ng`.<br>
+  ![result for 'find eve irfan'](images/findEveIrfanResult.png)
 
 
 ### Add affiliations of a staff/patient: `addaffn`

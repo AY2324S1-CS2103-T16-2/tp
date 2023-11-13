@@ -18,9 +18,9 @@ public class FindCommand extends Command {
     public static final String COMMAND_WORD = "find";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Allows user to filter the list by attribute, by "
-            + "adding a tag, and keywords after it to search for. Finds all persons whose attribute contain any of "
+            + "adding a prefix, and keywords after it to search for. Finds all persons whose attribute contain any of "
             + "the specified keywords (case-insensitive) and displays them as a list with index numbers. Can only"
-            + "take in one tag at a time (i.e. can only search by one attribute at a time).\n"
+            + "take in one prefix at a time (i.e. can only search by one attribute at a time).\n"
             + "Parameters: (n|p|e|r|a)/[KEYWORD] [MORE_KEYWORDS]...\n"
             + "Example 1: " + COMMAND_WORD + " n/alice bob charlie\n"
             + "Example 2: " + COMMAND_WORD + " r/doctor";
