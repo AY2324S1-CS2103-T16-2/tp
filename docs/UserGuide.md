@@ -47,14 +47,14 @@ MediSync strives to streamline the storage and identification of contacts, focus
 
 Here are some definitions that are noteworthy when using MediSync.
 
-| Term                | Explanation                                                                                                                                                                                                                                                                                                                                                                  |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Role                | The **role** of a person in the contact list is either `Doctor`, `Nurse`, or `Patient`. When we use the word staff, we are implying both `Doctor`s and `Nurse`s.                                                                                                                                                                                                             |
-| Affiliation         | With staff members providing care to specific `Patient`s, there is a need to establish an association between staff members and `Patient`s. We use **affiliations** to denote such relationships. Such relationships can never be one-sided in MediSync, and it will not exist between staff members or between `Patient`s.                                                  |
-| Affiliation History | Having some level of history-taking is vital in tracking medical care. The use of **affiliation history** is to track past staff members that had affiliations with a particular `Patient`, and vice-versa. MediSync allows for the deletion of these history, but existing affiliations can never be deleted from the affiliation history until the affiliation is severed. |
-| Shift Days          | **Shift days** is an attribute unique to staff members. For simplicity, the current version of MediSync monitors the workdays of each staff member in blocks of days.                                                                                                                                                                                                        |
-| Next of Kin         | The **Next of Kin** attribute is meant for `Patient`s. Having a method of contact with the `Patient`s next of kin is vital in medical care.                                                                                                                                                                                                                                  |
-| Specialisations      | Exclusively for `Doctor`s, the **specialisations** attribute offers added information about each doctor, enabling the appropriate doctor to be matched with patients having diverse requirements.                                                                                                                                                                             |
+| Term                | Explanation                                                                                                                                                                                                                                                                                                                              |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Role                | The **role** of a person in the contact list is either `Doctor`, `Nurse`, or `Patient`. When use the word staff, we mean both `Doctor`s and `Nurse`s.                                                                                                                                                                                    |
+| Affiliation         | With staff members providing care to specific `Patient`s, there is a need to establish an association between staff members and `Patient`s. We use **affiliations** to denote such relationships. Such relationships are all bidirectional in MediSync, and it can only be between a staff member (`Doctor` or `Nurse`) and a `Patient`. |
+| Affiliation History | Having some level of history-taking is vital in tracking medical care. We use **affiliation history** to track past staff members who have had affiliations with a particular `Patient`, and vice-versa. MediSync allows the user to delete this history, while continuing to keep existing affiliations within the affiliation history. |
+| Shift Days          | **Shift days** is an attribute unique to staff members, which tracks the days on which a particular staff member will be on shift duty. This is essential so that the user can manage staff availability. For simplicity, the current version of MediSync only monitors the workdays of each staff member, and not the work timings.     |
+| Next of Kin         | The **Next of Kin** is an attribute unique to `Patient`s. Having a way to contact the `Patient`s next of kin is vital in medical care.                                                                                                                                                                                                   |
+| Specialisations      | **Specialisations** is an attribute unique to `Doctor`s. It offers added information about each doctor, enabling the appropriate doctor to be matched with patients who have diverse requirements.                                                                                                                                       |
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -70,7 +70,7 @@ Here are some definitions that are noteworthy when using MediSync.
 * Items in square brackets are optional.<br>
   e.g. `n/NAME [a/AFFN_NAME]` can be used as `n/John Doe a/Sam Young` or as `n/John Doe`.
 
-* Items with `…`​ after them can be used multiple times including zero times.<br>
+* Items with `…`​ after them can be used multiple times, including zero times.<br>
   e.g. `[a/AFFN_NAME]…​` can be used as ` ` (i.e. 0 times), `a/Sam Young`, `a/Sam Young a/Ben Chua` etc.
 
 * Parameters can be in any order.<br>
@@ -105,7 +105,7 @@ Format: `add n/NAME p/PHONE_NUMBER e/EMAIL r/ROLE [a/AFFN_NAME]…​`
 
 <box type="tip" seamless>
 
-**Tip:** A person can have any number of affiliations (including 0). However, to add an affiliation, it must already exist in the contact list. In addition, the role of the affiliation must be constrasting to the person being added (i.e. affiliations can only be between Nurse and Patient OR Doctor and Patient).
+**Tip:** A person can have any number of affiliations (including 0). However, to add an affiliation, the person must already exist in the contact list. In addition, the role of the affiliation must be appropriate the person being added (i.e. affiliations can only be between Nurse and Patient OR Doctor and Patient).
 
 </box>
 
